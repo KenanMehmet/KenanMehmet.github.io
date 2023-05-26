@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins';
+}
+
+#headline {
+    background-color: lightgreen;
+    padding: 2px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 0px;
+
+}
+
+#headline h1 {
+    border: 10px rgb(28, 28, 28);
+    font-size: 60px;
+    padding-bottom: 0%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#headline p {
+    font-style: italic;
+    margin-bottom: 0%;
+}
+
+/* group selector */
+
+.p-1,
+.p-2,
+.p-3 {
+    background-color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.main-article {
+    background-color: aqua;
+    padding-left: 3px;
+}
+
+.video-container {
+    background-color: grey;
+    padding: 5px;
+    border: 4px solid black;
+}
+
+.footer {
+    background-color: aliceblue;
+    padding: 2px;
+}
+
+.footer a {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer #email {
+    text-decoration: underline;
+}
