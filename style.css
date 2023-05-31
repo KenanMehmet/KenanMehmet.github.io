@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Raleway', sans-serif;
     padding: 0px;
     margin: 0px;
 }
@@ -29,13 +31,18 @@
 
 .heading-name {
     font-size: 32px;
-    margin-left: 2%;
     text-align: left;
 }
 
 .nav-item {
     text-decoration: none;
     color: lightslategray;
+    padding: 10px;
+    background-color: aqua;
+}
+
+.nav-item a {
+    text-decoration: none;
 }
 
 .active {
@@ -61,4 +68,43 @@
 .profile-picture {
     float: left;
     padding-right: 10px;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+}
+
+.dropdown-container {
+    display: inline-block;
+}
+
+.dropdown-container:hover .dropdown-list {
+    display: block
+}
+
+.dropdown-item {
+    width: 200px;
+    position: absolute;
+    background-color: burlywood;
+}
+
+.dropdown-item a {
+    z-index: 0;
+    display: block;
+    text-align: left;
+}
+
+.projects-box {
+    background-color: blue;
+}
+
+.projects-container {
+    background-color: blue;
+}
+
+.projects-item-title {
+    background: rgb(17, 9, 108);
+    background: linear-gradient(0deg, rgba(17, 9, 108, 1) 0%, rgba(13, 208, 245, 1) 12%);
 }
