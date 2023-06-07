@@ -27,18 +27,28 @@
 .nav-container {
     margin-left: 2%;
     margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-template-rows: 50px 40px;
+    justify-content: space-between;
+}
+
+.nav-links {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.nav-item {
+    display: inline;
+    text-decoration: none;
+    color: lightslategray;
+    padding: 10px;
+    background-color: aqua;
 }
 
 .heading-name {
     font-size: 32px;
     text-align: left;
-}
-
-.nav-item {
-    text-decoration: none;
-    color: lightslategray;
-    padding: 10px;
-    background-color: aqua;
 }
 
 .nav-item a {
