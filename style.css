@@ -76,7 +76,7 @@
 }
 
 .languages-box {
-    padding-bottom: 50%;
+    /* padding-bottom: 50%; */
 }
 
 .profile-picture {
@@ -169,4 +169,10 @@
 
 .accordian-title:target .accordian-content {
     max-height: 100px;
+}
+
+.footer {
+    background: rgb(71, 110, 169);
+    border-top: solid black 1px;
+    height: 100px;
 }
