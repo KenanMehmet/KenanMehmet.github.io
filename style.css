@@ -43,7 +43,8 @@
     text-decoration: none;
     color: lightslategray;
     padding: 10px;
-    background-color: aqua;
+    font-size: 1.2rem;
+    box-shadow: 0px 5px 5px 0px;
 }
 
 .heading-name {
@@ -94,11 +95,7 @@
     display: block
 }
 
-.dropdown-item {
-    width: 200px;
-    position: absolute;
-    background-color: burlywood;
-}
+
 
 .dropdown-item a {
     z-index: 0;
@@ -117,4 +114,25 @@
 .projects-item-title {
     background: rgb(17, 9, 108);
     background: linear-gradient(0deg, rgba(17, 9, 108, 1) 0%, rgba(13, 208, 245, 1) 12%);
+}
+
+.dropdown {
+    position: relative
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + .25rem);
+    background-color: beige;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
 }
