@@ -30,6 +30,7 @@
     display: grid;
     grid-template-columns: repeat(1, 2fr);
     grid-template-rows: 50px 40px;
+    grid-row-gap: 10px;
     justify-content: space-between;
 }
 
@@ -44,7 +45,7 @@
     color: lightslategray;
     padding: 10px;
     font-size: 1.2rem;
-    box-shadow: 0px 5px 5px 0px;
+    box-shadow: 1px 2px 1px 0px;
 }
 
 .heading-name {
@@ -87,21 +88,30 @@
     min-width: 160px;
 }
 
-.dropdown-container {
-    display: inline-block;
+.links-row {
+    display: flex;
+    justify-content: start;
+
 }
 
-.dropdown-container:hover .dropdown-list {
+.dropdown span:hover .dropdown-list {
     display: block
 }
 
 
+.dropdown-item {
+    border-bottom: solid black 1px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 .dropdown-item a {
-    z-index: 0;
     display: block;
     text-align: left;
+    text-decoration: none;
 }
+
 
 .projects-box {
     background-color: blue;
