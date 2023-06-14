@@ -33,7 +33,6 @@
     justify-content: center;
 }
 
-.nav-container>span {}
 
 .nav-item {
     box-shadow: 1px 2px 1px 0px;
@@ -65,14 +64,22 @@
 }
 
 .description-box {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10vw;
+    margin-right: 10vw;
     margin-top: 30px;
     margin-bottom: 30px;
     height: 250px;
-    padding: 2%;
+    padding: 2vh;
     border: 2px solid black;
     box-shadow: 1px 2px 15px 5px;
+    overflow: auto;
+}
+
+@media(max-width: 500px) {
+    .description-box {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 .languages-box {
