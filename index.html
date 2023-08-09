@@ -15,20 +15,16 @@
     <nav class="nav-bar">
         <h1 class="heading-name">Kenan Mehmet</h1>
         <div class="nav-container">
-            <span class="nav-item"><a href="index.html">Home</a></span>
-            <div class="dropdown">
-                <span class="nav-item">Projects</span>
-                <div class="dropdown-menu">
-                    <span class="dropdown-item"><a href="">Chess</a></span>
-                    <span class="dropdown-item"><a href=""></a>Website</a></span>
-                    <span class="dropdown-item"><a href=""></a>WebScraper</a></span>
-                </div>
-            </div>
+            <span class="nav-item"><a href="#main-body">Home</a></span>
+            <span class="nav-item"><a href="#projects">Projects</a></span>
             <span class="nav-item"><a href="contact.html">Contact Me</a>
             </span>
         </div>
     </nav>
-    <div class="main-body">
+    <div class="main-body" id="main-body">
+        <div class="yellow-bar"></div>
+        <div class="orange-bar"></div>
+        <div class="red-bar"></div>
         <div class="description-box">
             <img class="profile-picture" src="https://picsum.photos/200/250" alt="profile picture">
             <h2>About me</h2>
@@ -39,17 +35,13 @@
                 dignissimos beatae necessitatibus vel, veritatis est dolor quae reiciendis quo cum!</p>
         </div>
 
-        <div class="projects-box">
-            <div class="accordian" id="fifth-base">
-                <div class="accordian-title">
-                    <h2><a href="#fifth-base">Fifth Base</a></h2>
-                </div>
-                <div class="accordian-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati provident molestiae eum
-                        distinctio similique mollitia labore earum repudiandae, ea tempora.</p>
+        <div class="projects-box" id="projects">
+            <div class="project-container">
+
+                <div class="project-item-title">
+                    <h2>Space Ball: Baseball Simulation</h2>
                 </div>
             </div>
-            <h2>Projects</h2>
             <div class="project-container">
                 <div class="project-item-title">
                     <h2>Chess</h2>
@@ -57,7 +49,7 @@
             </div>
             <div class="project-container">
                 <div class="project-item-title">
-                    <h2>Website</h2>
+                    <h2>Fitness Website</h2>
                 </div>
             </div>
             <div class="project-container">
@@ -67,17 +59,20 @@
             </div>
         </div>
 
-        <div class="languages-box">
-            <h2>Languages</h2>
+        <div class="footer-basic">
+            <footer>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Home</a></li>
+                    <li class="list-inline-item"><a href="email:kenmehmet1@gmai.com">Email Me</a></li>
+                    <li class="list-inline-item"><a href="#">Phone Me</a></li>
+                </ul>
+                <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
+                            class="icon ion-social-snapchat"></i></a><a href="#"><i
+                            class="icon ion-social-twitter"></i></a><a href="#"><i
+                            class="icon ion-social-facebook"></i></a>
+                </div>
+            </footer>
         </div>
-
-        <footer class="footer">
-            <div>
-                <p>Hello</p>
-            </div>
-
-        </footer>
-    </div>
 
 </body>
 
