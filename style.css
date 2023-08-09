@@ -38,7 +38,7 @@
     box-shadow: 1px 2px 1px 0px;
     display: block;
     text-decoration: none;
-    color: lightslategray;
+    color: black;
     padding-left: 0px;
     padding-bottom: 0.5rem;
     padding-right: 10px;
@@ -68,12 +68,9 @@
     margin-right: 10vw;
     margin-top: 30px;
     margin-bottom: 30px;
-    height: 250px;
     padding: 2vh;
-    border: 2px solid black;
     box-shadow: 1px 2px 15px 5px;
     overflow: auto;
-    background-color: #0fa3b1;
     z-index: 10;
     position: relative;
 }
@@ -90,8 +87,40 @@
 }
 
 .profile-picture {
-    float: left;
+    float: right;
     padding-right: 10px;
+    animation: profile-picture 1s;
+    animation-delay: 5s;
+}
+
+.slide-down {
+    height: -100px;
+    -webkit-animation: slide-down 2s cubic-bezier(0.450, 0.760, 0.840, 0.940) both;
+    animation: slide-down 2s cubic-bezier(0.450, 0.760, 0.840, 0.940) both;
+}
+
+@-webkit-keyframes slide-down {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: ;
+        transform: ;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
 }
 
 .dropdown-list {
@@ -138,25 +167,30 @@
     align-items: center;
 }
 
-.projects-container {
-    background-color: #f7a072;
+.project-container {
+    background-color: #34E4EA;
     border-radius: 25px;
     padding: 10px;
     text-align: center;
-    margin: 10%;
-    transition: transform .2s;
+    margin: auto;
+    transition: transform 2s;
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+    align-self: center;
 }
+
 
 .project-container:hover {
     /* font-size: 1rem;
     font-size-adjust: 5px; */
     transform: scale(1.5);
+    font-size: 1rem;
 
 }
 
-.projects-item-title {
-    background: rgb(17, 9, 108);
-    background: linear-gradient(0deg, rgba(17, 9, 108, 1) 0%, rgba(13, 208, 245, 1) 12%);
+.project-item-title {
+    text-align: center;
 }
 
 .dropdown {
@@ -212,6 +246,9 @@
     padding: 40px 0;
     background: rgb(71, 110, 169);
     border-top: solid black 1px;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
 }
 
 .footer-basic ul {
@@ -273,10 +310,9 @@
 .yellow-bar,
 .orange-bar {
     padding: 5px;
-    width: 75%;
+    width: 30%;
     height: 10px;
     margin: 0 auto;
-    transform: rotate(45deg);
     position: absolute;
     overflow: hidden;
     z-index: 0;
@@ -285,20 +321,77 @@
 .red-bar {
     background-color: red;
     padding: 20px;
+    width: 40%;
     top: 0px;
+    left: -220px;
     border-radius: 0px 15px 0px 0px;
+    -webkit-animation: slide-right 1s cubic-bezier(0.250, 0.760, 0.800, 0.940) both;
+    animation: slide-right 1s cubic-bezier(0.450, 0.760, 0.840, 0.940) both;
+    opacity: 0;
 }
 
 .orange-bar {
     background-color: orange;
-    top: 20px;
+    top: 60px;
     z-index: 1;
+    -webkit-animation: slide-right 1s cubic-bezier(0.250, 0.760, 0.800, 0.940) both;
+    animation: slide-right 1s cubic-bezier(0.450, 0.760, 0.840, 0.940) both;
+    animation-delay: 0.4s;
+    opacity: 0;
+
 }
 
 .yellow-bar {
     background-color: yellow;
-    top: 40px;
+    top: 80px;
     z-index: 2;
+    -webkit-animation: slide-right 1s cubic-bezier(0.250, 0.760, 0.800, 0.940) both;
+    animation: slide-right 1s cubic-bezier(0.450, 0.760, 0.840, 0.940) both;
+    animation-delay: 0.5s;
+    opacity: 0;
+
 }
 
-/* Credit to https://epicbootstrap.com/snippets/footer-basic */
+.slide-down {
+    height: -100px;
+
+}
+
+@-webkit-keyframes slide-right {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+
+    10% {
+        opacity: 0.25;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    95% {
+        -webkit-transform: translateX(150px);
+        transform: translateX(150px);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 1;
+    }
+}
