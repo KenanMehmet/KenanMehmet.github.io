@@ -1,0 +1,69 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: aliceblue;
+    text-shadow: 2px 2px #000;
+}
+
+h1 {
+    font-size: 10vw;
+}
+
+.background {
+    background: hsla(217, 100%, 50%, 1);
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 100vh;
+        opacity: 1;
+    }
+}
+
+@keyframes sway {
+    0% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: 50px;
+    }
+
+    50% {
+        margin-left: -50px;
+    }
+
+    75% {
+        margin-left: 50px;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+#snow-container {
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: opacity 500ms;
+    width: 100%
+}
+
+.snow {
+    animation: fall ease-in infinite, sway ease-in-out infinite;
+    color: skyblue;
+    position: absolute;
+    z-index: -1;
+}
