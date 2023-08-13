@@ -1,4 +1,4 @@
-const snowContainer = document.getElementById("description-box")
+const snowContainer = document.getElementById("hero-banner")
 
 const snowContent = ['&#10052', '&#10053', '&#10054']
 
