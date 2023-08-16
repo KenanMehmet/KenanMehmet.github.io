@@ -30,7 +30,14 @@
 
 .nav-container button {
     padding: 8px;
-    margin-right: 16px
+    width: 45px;
+    height: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #fbb996;
+    fill: black;
+    box-shadow: 6px 6px 0px rgba(82, 82, 82, 0.25);
+    border: black solid 1px;
 }
 
 
@@ -253,24 +260,23 @@
     opacity: 1;
 }
 
-.accordian-title {
+.accordion-title {
     background-color: rgb(0, 174, 255);
     transition: color 1s;
 }
 
-.accordian-content {
+.accordion-content {
     background-color: rgb(132, 166, 155);
-    overflow: hidden;
     max-height: 0;
-    transition: max-height 0.2 ease-out;
+    transition: max-height 1s ease-out;
     position: relative;
 }
 
-.accordian-title:hover {
+.accordion-title:hover {
     background-color: rgb(0, 119, 255);
 }
 
-.accordian-title:target .accordian-content {
+.accordion-title:target .accordion-content {
     max-height: 100px;
 }
 
@@ -452,4 +458,16 @@
     transition: max-height 0.2s ease-out;
 }
 
-.accordion-content {}
+.contact-form {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10px;
+}
+
+.contact-form form {
+    display: flex;
+}
+
+.contact-form input {
+    padding: 10px;
+}

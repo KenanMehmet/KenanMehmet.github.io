@@ -1,7 +1,5 @@
 const snowContainer = document.getElementById("hero-banner")
 
-const snowContent = ['&#10052', '&#10053', '&#10054']
-
 const random = (num) => {
     return Math.floor(Math.random() * num)
 }
@@ -24,7 +22,7 @@ const createSnow = (num) => {
         let snow = document.createElement("div");
         snow.className = "snow";
         snow.style.cssText = getRandomStyles();
-        snow.innerHTML = snowContent[random(2)]
+        snow.innerHTML = '&#8226'
         snowContainer.append(snow);
     }
 }
