@@ -270,6 +270,7 @@
     max-height: 0;
     transition: max-height 1s ease-out;
     position: relative;
+    display: none;
 }
 
 .accordion-title:hover {
@@ -466,6 +467,8 @@
 
 .contact-form form {
     display: flex;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
 .contact-form input {
