@@ -54,3 +54,30 @@ function triggerAccordion(element) {
     content.children[3].src = change[3]
     unfade(content)
 }
+
+function ajaxForm() {
+    var x = document.getElementById("contact-form");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length; i++) {
+        console.log(i)
+        console.log(x.elements[i].value)
+        text += x.elements[i].value + "<br>";
+    }
+    fetch("https://formsubmit.co/ajax/kenmehmet1@gmail.com", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            name: x.elements[0].value,
+            email: x.elements[1].value,
+            subject: x.elements[2].value + " " + x.elements[3].value,
+            message: x.elements[4].value,
+        })
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+}

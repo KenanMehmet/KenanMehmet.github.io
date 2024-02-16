@@ -9,7 +9,7 @@
 .main-body {
     padding-top: 100px;
     background-color: #d9e5d6;
-
+    padding-bottom: 50px;
 }
 
 .nav-bar {
@@ -38,6 +38,11 @@
     fill: black;
     box-shadow: 6px 6px 0px rgba(82, 82, 82, 0.25);
     border: black solid 1px;
+    cursor: pointer;
+}
+
+.nav-container button:hover {
+    background-color: #dda080;
 }
 
 
@@ -57,7 +62,7 @@
 }
 
 .heading-name {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: left;
     padding-left: 10px;
     color: white;
@@ -186,14 +191,11 @@
 
 
 .projects-box {
-    display: grid;
-    grid-template-columns: repeat(4, 4fr);
-    background-color: #f7a072;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    background-color: #ffb892;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    font-size: 0.75rem;
     justify-content: center;
     align-items: center;
 }
@@ -266,12 +268,41 @@
 }
 
 .accordion-content {
-    background-color: rgb(132, 166, 155);
-    max-height: 0;
-    transition: max-height 1s ease-out;
-    position: relative;
-    display: none;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
+
+.projects-tab {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2vw;
+    font-size: 3rem;
+    height: 3vh;
+    padding-bottom: 50px;
+}
+
+.tab-title {
+    font-size: 60px
+}
+
+.project-title {
+    margin-left: 2vw;
+    font-size: 3rem;
+    height: 3vh;
+    padding-bottom: 50px;
+}
+
+.project-technologies {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-content {
+    font-size: 1.2rem;
+
+}
+
 
 .accordion-title:hover {
     background-color: rgb(0, 119, 255);
@@ -281,76 +312,9 @@
     max-height: 100px;
 }
 
-.footer {
-
-    height: 100px;
+.bold {
+    font-weight: bold;
 }
-
-
-.footer-basic {
-    padding: 40px 0;
-    background: rgb(71, 110, 169);
-    border-top: solid black 1px;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-}
-
-.footer-basic ul {
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-.footer-basic li {
-    padding: 0 10px;
-}
-
-.footer-basic ul a {
-    color: inherit;
-    text-decoration: none;
-    opacity: 0.8;
-}
-
-.footer-basic ul a:hover {
-    opacity: 1;
-}
-
-.footer-basic .social {
-    text-align: center;
-    padding-bottom: 25px;
-}
-
-.footer-basic .social>a {
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    margin: 0 8px;
-    color: inherit;
-    opacity: 0.75;
-}
-
-.footer-basic .social>a:hover {
-    opacity: 0.9;
-}
-
-.footer-basic .copyright {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 13px;
-    color: #aaa;
-    margin-bottom: 0;
-}
-
-
 
 .red-bar,
 .yellow-bar,
@@ -465,12 +429,76 @@
     margin-top: 10px;
 }
 
+.contact-form h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
 .contact-form form {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     align-items: space-between;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(20px, auto);
+    grid-gap: 20px;
 }
+
+.form-content>* {
+    grid-column: span 3;
+    font-size: 16px;
+}
+
+.form-content select {
+    appearance: none;
+}
+
+.full-width {
+    grid-column: 1 / 7;
+}
+
 
 .contact-form input {
     padding: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    font-size: 16px;
+}
+
+
+/* CSS */
+.submit-button {
+    background: linear-gradient(to bottom right, #ef7c47, #ffb892);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 0.1rem;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    grid-column: span 2;
+}
+
+.submit-button:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.submit-button:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
