@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=#, initial-scale=1.0">
+    <title>SPACEBALL</title>
+    <link rel="stylesheet" href="baseball.css">
+</head>
+
+
+<body>
+
+    <div id="loading" class="loader"></div>
+
+    <div class="game-container">
+        <H1>SPACEBALL</H1>
+        <div class="game-header">
+            <h2>High Heat Radiators</h2>
+            <h2>VS</h2>
+            <h2>Rusty Cowboys</h2>
+            <h3 id="home-score">0</h3>
+            <h3 id="replace-me"></h3>
+            <h3 id="away-score">0</h3>
+            <button class="button-class" id="start-game" onclick="runInning()">Play Ball!</button>
+        </div>
+        <div id="game-log"></div>
+        <div id="spaceball-field">
+            <img src="Spaceball-field.png" alt="field-missing" style="width: 600px">
+        </div>
+    </div>
+
+</body>
+<script src="baseball.js"></script>
+
+</html>
